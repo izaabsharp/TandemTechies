@@ -31,7 +31,8 @@ void GameModel::update()
         getCurrentLevel()->getPlayer()->setDead(false);
         lives--;
         if(lives <= 0) {
-            emit gameFinished(true);
+            emit gameFinished(false);
+
         }
         Network::instance().send("Reset");
         resetCurrentLevel();

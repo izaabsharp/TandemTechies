@@ -22,7 +22,8 @@ void ScoreDisplay::update()
     QString display = "<center><b style=\"color:green;\">";
     QStringList list = ScoreManager::instance().readScores();
 
-    for(int i = 0; i < list.size(); i++) {
+    for(int i = 0; i < list.size(); i++)
+    {
         display += list[i];
         if(i < list.size() - 1) display += "<hr style=\"size:3;\"/>";
     }
